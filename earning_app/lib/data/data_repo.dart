@@ -15,8 +15,9 @@ class JsonResults {
   List<EachResult> result;
 
   factory JsonResults.fromJson(Map<String, dynamic> json) => JsonResults(
-      result: List<EachResult>.from(
-          (json["result"] as Iterable).map((x) => EachResult.fromJson(x))));
+        result: List<EachResult>.from(
+            (json["result"] as Iterable).map((x) => EachResult.fromJson(x))),
+      );
 }
 
 class EachResult {
@@ -30,7 +31,7 @@ class EachResult {
   int id;
   String name;
   String imagepath;
-  double type;
+  String type;
 
   factory EachResult.fromJson(Map<String, dynamic> json) => EachResult(
         id: json["id"],
